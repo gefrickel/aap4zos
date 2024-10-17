@@ -1,0 +1,12 @@
+- name: Test command
+  hosts: 13.120.95.133
+  gather_facts: false
+  environment: "{{ environment_vars }}"
+  tasks:
+    - name: Print FQDN
+      command: hostname
+      register: command
+
+    - name: Print command results.
+      debug:
+        var: command.stdout

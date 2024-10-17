@@ -1,6 +1,5 @@
----
 - name: Execute one or more TSO commands.
-  hosts: zos_host
+  hosts: 10.251.0.24
   gather_facts: false
   environment: "{{ environment_vars }}"
   tasks:
@@ -11,6 +10,7 @@
           ibm.ibm_zos_core.zos_tso_command:
             commands:
               "{{ zos_tso_command.split('\n') | default(\"NOP\") }}"
+              # LISTUSER IBMUSER
           register: command
 
       always:

@@ -1,0 +1,5 @@
+---
+your_name: Mathias
+ansible_host: 13.120.95.133
+ansible_user: U3OBBBB
+ansible_private_key_file: ~/.ssh/id_rsa_atruvia
